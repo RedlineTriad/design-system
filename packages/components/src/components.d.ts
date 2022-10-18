@@ -22,18 +22,18 @@ export namespace Components {
         "write": (text: string) => Promise<void>;
     }
     interface PostButton {
-        "active": boolean;
-        "animated": boolean;
-        "block": boolean;
-        "disabled": boolean;
-        "href": string;
-        "icon": string;
-        "iconend": boolean;
-        "size": string;
-        "tag": string;
-        "target": string;
-        "type": string;
-        "variant": string;
+        "active"?: boolean;
+        "animated"?: boolean;
+        "block"?: boolean;
+        "disabled"?: boolean;
+        "href"?: string;
+        "icon"?: string;
+        "iconend"?: boolean;
+        "size"?: string;
+        "tag"?: string;
+        "target"?: string;
+        "type"?: string;
+        "variant"?: string;
     }
 }
 export interface MyComponentCustomEvent<T> extends CustomEvent<T> {

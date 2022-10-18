@@ -7,18 +7,18 @@ import { PROP_TAG, PROP_TYPE, PROP_HREF, PROP_TARGET, PROP_VARIANT, PROP_SIZE, P
   shadow: true
 })
 export class PostButton {
-  @Prop() tag: string = PROP_TAG.default;
-  @Prop() type: string = PROP_TYPE.default;
-  @Prop() href: string = PROP_HREF.default;
-  @Prop() target: string = PROP_TARGET.default;
-  @Prop() variant: string = PROP_VARIANT.default;
-  @Prop() size: string = PROP_SIZE.default;
-  @Prop() active: boolean = PROP_ACTIVE.default;
-  @Prop() disabled: boolean = PROP_DISABLED.default;
-  @Prop() icon: string = PROP_ICON.default;
-  @Prop() iconend: boolean = PROP_ICONEND.default;
-  @Prop() animated: boolean = PROP_ANIMATED.default;
-  @Prop() block: boolean = PROP_BLOCK.default;
+  @Prop() tag?: string = PROP_TAG.default;
+  @Prop() type?: string = PROP_TYPE.default;
+  @Prop() href?: string = PROP_HREF.default;
+  @Prop() target?: string = PROP_TARGET.default;
+  @Prop() variant?: string = PROP_VARIANT.default;
+  @Prop() size?: string = PROP_SIZE.default;
+  @Prop() active?: boolean = PROP_ACTIVE.default;
+  @Prop() disabled?: boolean = PROP_DISABLED.default;
+  @Prop() icon?: string = PROP_ICON.default;
+  @Prop() iconend?: boolean = PROP_ICONEND.default;
+  @Prop() animated?: boolean = PROP_ANIMATED.default;
+  @Prop() block?: boolean = PROP_BLOCK.default;
 
   @Element() host: HTMLElement;
 
