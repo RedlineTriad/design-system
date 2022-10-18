@@ -20,7 +20,7 @@ export class PostButton {
   @Prop() animated: boolean = PROP_ANIMATED.default;
   @Prop() block: boolean = PROP_BLOCK.default;
 
-  @Element() element: HTMLElement;
+  @Element() host: HTMLElement;
 
   private conditionalPropertyMapper (conditionalProperties: object) {
     return Object.entries(conditionalProperties)
@@ -64,7 +64,7 @@ export class PostButton {
               this.conditionalPropertyMapper({
                 [`btn-${this.variant}`]: this.variant,
                 [`btn-${this.size}`]: this.size,
-                'btn-icon': this.icon && !this.element.innerHTML,
+                'btn-icon': this.icon && !this.host.innerHTML,
                 'btn-animated': !this.icon && this.animated,
                 'active': this.active,
                 'd-block': this.block
@@ -74,7 +74,7 @@ export class PostButton {
           type={PROP_TYPE.if.type.includes(this.tag) ? this.type : null}
           href={PROP_HREF.if.type.includes(this.tag) ? this.href : null}
           target={PROP_TARGET.if.type.includes(this.tag) ? this.target : null}
-          value={this.tag === 'input' ? this.element.innerHTML : null}
+          value={this.tag === 'input' ? this.host.innerHTML : null}
           disabled={this.disabled ? 'disabled' : null}
         >
           {buttonInnerDom}
