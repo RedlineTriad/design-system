@@ -10,7 +10,7 @@ import './preview.scss';
 import { defineCustomElements as defineInternetHeader } from '@swisspost/internet-header';
 import docJson from '@swisspost/design-system-components/dist/docs.json';
 import {
-  extractArgTypes,
+  extractArgTypesFactory,
   extractComponentDescription,
   setStencilDocJson,
 } from '@pxtrn/storybook-addon-docs-stencil';
@@ -61,7 +61,7 @@ export const parameters = {
       order: [
         'Home',
         'Get Started',
-        ['Basics', 'Styles', 'Components', 'Internet-Header', 'Intranet-Header', 'Icons'],
+        ['Icons'],
         'Foundations',
         ['Typography', 'Color', 'Layout', 'Elevation', 'Accessibility'],
         'Templates',
@@ -82,7 +82,7 @@ export const parameters = {
     stylePreview: true,
   },
   docs: {
-    extractArgTypes,
+    extractArgTypes: extractArgTypesFactory({ dashCase: true }),
     extractComponentDescription,
     container: DocsLayout,
     components: {

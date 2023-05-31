@@ -1,9 +1,10 @@
-@use "@swisspost/design-system-styles/variables/color";
-@use "@swisspost/design-system-styles/components/forms";
-@use "@swisspost/design-system-styles/components/floating-label";
-@use "@swisspost/design-system-styles/components/grid";
-@use "../../utils/utils.scss";
-@use "../../utils/mixins.scss";
+@use '@swisspost/design-system-styles/core' as post;
+@use '@swisspost/design-system-styles/variables/color';
+@use '@swisspost/design-system-styles/components/forms';
+@use '@swisspost/design-system-styles/components/floating-label';
+@use '@swisspost/design-system-styles/components/grid';
+@use '../../utils/utils.scss';
+@use '../../utils/mixins.scss';
 
 :host {
   display: block;
@@ -81,6 +82,13 @@
 
   &.open {
     transform: translateY(0);
+  }
+}
+
+.form-floating {
+  .form-control,
+  .form-control + label {
+    padding-right: post.$input-padding-x * 3;
   }
 }
 
